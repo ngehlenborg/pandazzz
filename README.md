@@ -26,7 +26,7 @@ Launch the Django development server:
 A sample data file (`data/movies.csv`) is hard-coded and can be queried by field:
 
 ```
-http://localhost/data?format=json&fields=Name,ReleaseDate,AvgRating
+http://localhost:8000/data?format=json&fields=Name,ReleaseDate,AvgRating
 ```
 
 This will return JSON that includes the selected fields:
@@ -38,7 +38,7 @@ This will return JSON that includes the selected fields:
 Other formats such as CSV can be retrieved as well:
 
 ```
-http://localhost/data?format=csv&fields=Name,ReleaseDate,AvgRating
+http://localhost:8000/data?format=csv&fields=Name,ReleaseDate,AvgRating
 ```
 
 Details about possible formats are included in the [django-rest-pandas](https://github.com/wq/django-rest-pandas) documentation.
