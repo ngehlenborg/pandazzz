@@ -4,9 +4,9 @@ import pandas as pd
 
 class TimeSeriesView(PandasSimpleView):
     def get_data(self, request, *args, **kwargs):
-        print(str(request.query_params))
-        df = pd.read_csv('/Users/nils/Projects/pandazzz/pandazzz/pandazzz/data_38.csv')
+       
+        # Replace this with a smarter way to load a data file
+        df = pd.read_table('data/movies.csv', sep=';')
 
-        print(request.query_params['fields'])
-
+        # return columns requested in "fields" query parameter
         return df.filter( items=request.query_params['fields'].split(","))
